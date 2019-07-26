@@ -1,0 +1,41 @@
+{
+  "name": "HybridApp",
+  "version": "0.0.1",
+  "private": true,
+  "main": "electron/electron-starter.js",
+  "scripts": {
+    "android:reverse": "adb reverse tcp:8081 tcp:1234",
+    "build-web": "react-scripts build",
+    "electron": "electron .",
+    "start": "node node_modules/react-native/local-cli/cli.js start --port 1234",
+    "start:android": "react-native run-android --port 1234",
+    "start:ios": "react-native run-ios --port 1234",
+    "start-web": "react-scripts start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.6.3",
+    "react-art": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-native": "0.58.4",
+    "react-native-web": "^0.10.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-native": "^4.3.0",
+    "react-scripts": "^2.1.5"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "electron": "^4.0.4",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
