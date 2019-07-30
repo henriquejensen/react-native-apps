@@ -7,19 +7,19 @@
  */
 
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, Button } from "react-native";
+import { ScrollView, StyleSheet, Text, View, Button } from "react-native";
 import Toast from "./components/Toast";
 import { NativeModules } from "react-native";
 var TaskManager = NativeModules.TaskManager;
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   showText(message) {
     Toast.showText(message, Toast.SHORT);
   }
 
   handleCalendar() {
-    CalendarManager.addEvent("Birthday Party", "4 Privet Drive, Surrey");
+    debugger;
+    // CalendarManager.addEvent("Birthday Party", "4 Privet Drive, Surrey");
   }
 
   handleClick = () => {
@@ -56,7 +56,7 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>{JSON.stringify(Toast)}</Text>
         <Button
@@ -79,7 +79,7 @@ export default class App extends Component<Props> {
           title="Call Native Function With Promise"
           color="blue"
         />
-      </View>
+      </ScrollView>
     );
   }
 }
